@@ -1,8 +1,8 @@
 import { Brain, Coffee } from "lucide-react"
 import { FocusDiv, LongBreakDiv, ShortBreakDiv } from "./styles/PomodoroPhases"
+import PomodoroTimer from "./components/PomodoroTimer"
 
 function App() {
-  
 
   return (
     <>
@@ -16,6 +16,8 @@ function App() {
         <LongBreakDiv>
           <Coffee /> Pausa Longa
         </LongBreakDiv>
+
+        <PomodoroTimer defaultPomodoroTime={1500} />
       </div>
     </>
   )
