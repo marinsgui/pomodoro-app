@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FocusDiv = styled.div`
+export const PomodoroPhaseStyles = styled.div`
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;

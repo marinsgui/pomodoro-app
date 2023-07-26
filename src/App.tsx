@@ -1,25 +1,28 @@
-import { Brain, Coffee } from "lucide-react"
-import { FocusDiv, LongBreakDiv, ShortBreakDiv } from "./styles/PomodoroPhases"
+import { Brain } from "lucide-react"
+import { PomodoroPhaseStyles } from "./styles/PomodoroPhases"
 import PomodoroTimer from "./components/PomodoroTimer"
+import Button from "./components/Button"
+
+import { Play, Pause } from "lucide-react"
+import { MainPageContainerStyles, MainPageStyles } from "./styles/MainPageStyles"
 
 function App() {
 
+  console.log(typeof <Play />)
+
   return (
-    <>
-      <div>
-        <FocusDiv>
+    <MainPageStyles>
+      <MainPageContainerStyles>
+        <PomodoroPhaseStyles>
           <Brain /> Foco
-        </FocusDiv>
-        <ShortBreakDiv>
-          <Coffee /> Pausa Curta
-        </ShortBreakDiv>
-        <LongBreakDiv>
-          <Coffee /> Pausa Longa
-        </LongBreakDiv>
+        </PomodoroPhaseStyles>
 
         <PomodoroTimer defaultPomodoroTime={1500} />
-      </div>
-    </>
+        <Button>
+          <Pause fill="#471515" size={30} />
+        </Button>
+      </MainPageContainerStyles>
+    </MainPageStyles>
   )
 }
 

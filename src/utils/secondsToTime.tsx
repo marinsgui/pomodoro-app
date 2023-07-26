@@ -1,4 +1,6 @@
-export default function secondsToTime(seconds: number): string {
+import { ReactNode } from "react"
+
+export default function secondsToTime(seconds: number): ReactNode {
     const min = zeroLeft((seconds / 60) % 60)
     const sec = zeroLeft((seconds % 60) % 60)
     
@@ -6,5 +8,11 @@ export default function secondsToTime(seconds: number): string {
         return Math.floor(num).toString().padStart(2, '0')
     }
 
-    return `${min}:${sec}`
+    return (
+        <>
+            {min}
+            <br />
+            {sec}
+        </>
+    )
 }
